@@ -13,7 +13,7 @@ import os
 # ---------------------------
 @st.cache_resource
 def get_client():
-    api_key = "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"
+    api_key = os.getenv("OPENROUTER_API_KEY")
 
     if not api_key:
         st.error("🚨 OPENROUTER_API_KEY not found. Set environment variable.")
